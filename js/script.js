@@ -21,6 +21,7 @@ body.addEventListener('click', (e) => {
         menudiv.classList.remove('main__menu_active');
         blackscreen.classList.remove('main__black-screen_active');
         modal.classList.remove('modal_active');
+        modalprofile.classList.remove('modal__profile_active');
     }
 });
 
@@ -85,3 +86,20 @@ function setClock(endtime) {
 }
 
 setClock(deadline);
+
+const btnprofile = document.querySelector('.main__button');
+const btnProfMenu = document.querySelector('.main__menu-btn');
+const modalprofile = document.querySelector('.modal__profile');
+
+btnprofile.addEventListener('click', (e) => {
+    e.preventDefault();
+    blackscreen.classList.add('main__black-screen_active');
+    modalprofile.classList.add('modal__profile_active');
+});
+
+btnProfMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    blackscreen.classList.add('main__black-screen_active');
+    modalprofile.classList.add('modal__profile_active');
+    menudiv.classList.remove('main__menu_active');
+});
