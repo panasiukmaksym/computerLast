@@ -103,3 +103,24 @@ btnProfMenu.addEventListener('click', (e) => {
     modalprofile.classList.add('modal__profile_active');
     menudiv.classList.remove('main__menu_active');
 });
+
+// Настройка слайдера
+
+$(document).ready(function(){
+    $('.carousel__inner').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><img src="../icon/arrow_left.png"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="../icon/arrow_right.png"></button>',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
+      });
+});
